@@ -1,11 +1,11 @@
 <?php
 
+	require '_constants.php';		// Including file with constants
 	$link = mysqli_connect( 
-				'localhost',
-				'root',
-				'orangepi',				// CHANGE PASSWORD !!!
-				'rooms');
-				
+				$dbHostname,
+				$dbUserName,
+				$dbPassword,				// CHANGE PASSWORD !!!
+				$dbDatabase);
 ?>
 
 

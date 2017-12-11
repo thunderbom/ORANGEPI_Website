@@ -11,11 +11,12 @@
 	
 <?php 
 
+	require '_constants.php';		// Including file with constants
 	$link = mysqli_connect( 
-				'localhost',
-				'root',
-				'orangepi',				// CHANGE USER NAME !!!
-				'rooms');
+				$dbHostname,
+				$dbUserName,
+				$dbPassword,				// CHANGE PASSWORD !!!
+				$dbDatabase);
 	
 	$rooms_list = mysqli_query($link, 'SELECT * FROM rooms;');
 	

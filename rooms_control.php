@@ -10,11 +10,12 @@
 <body>
 
 <?php 
+	require '_constants.php';		// Including file with constants
 	$link = mysqli_connect( 
-				'localhost',
-				'root',
-				'orangepi',				// CHANGE PASSWORD !!!
-				'rooms');
+				$dbHostname,
+				$dbUserName,
+				$dbPassword,				// CHANGE PASSWORD !!!
+				$dbDatabase);
 	
 	$rooms_list = mysqli_query($link, 'SELECT * FROM rooms ORDER BY number ASC;');
 	
